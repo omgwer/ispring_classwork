@@ -8,13 +8,12 @@
 .header {
   padding-top: 36px;
   padding-right: 86px;
-  height: 977px;
   background: url(../img/home.jpg) no-repeat;
   background-size: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  padding-bottom: 100px;
 }
-
 
 .menu {
   margin-left: 86px;
@@ -29,10 +28,6 @@
           justify-content: space-between;
 }
 
-.animation {
-  opacity: 0;
-}
-
 .logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -40,24 +35,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: -webkit-transform 1s ease;
-  transition: -webkit-transform 1s ease;
-  -o-transition: transform 1s ease;
-  transition: transform 1s ease;
-  transition: transform 1s ease, -webkit-transform 1s ease;
-  -webkit-transform: translateY(25px);
-      -ms-transform: translateY(25px);
-          transform: translateY(25px);
-}
-
-.logo loaded {
-  -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-          transform: translateY(0);
 }
 
 .image {
   margin-right: 7px;
+  max-width: 100%;
 }
 
 .link {
@@ -103,6 +85,7 @@
   -webkit-transform: none;
       -ms-transform: none;
           transform: none;
+  margin-bottom: 150px;
 }
 
 .arrow__img {
@@ -130,16 +113,19 @@
 }
 
 .main {
-  margin-top: 138px;
-  margin-left: 290px;
-  vertical-align: top;
+  max-width: 1600px;
 }
 
 .learn {
-  width: 650px;
-  display: inline-block;
-  margin-right: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   vertical-align: top;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 h3 {
@@ -150,6 +136,7 @@ h3 {
   line-height: 100%;
   color: #000000;
   margin-bottom: 53px;
+  text-align: center;
 }
 
 .photo {
@@ -157,12 +144,13 @@ h3 {
 }
 
 .variants {
-  margin-top: 82px;
+  padding: 0 15px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 32px;
-  margin-right: 170px;
+  max-width: 1600px;
 }
 
 .variant {
@@ -173,8 +161,7 @@ h3 {
 }
 
 .quations {
-  margin-left: 171px;
-  margin-top: 262px;
+  margin: 0 auto;
 }
 
 .que {
@@ -184,6 +171,8 @@ h3 {
   font-size: 70px;
   line-height: 121.19%;
   color: #000000;
+  text-align: center;
+  margin-bottom: 25px;
 }
 
 .variant {
@@ -194,7 +183,6 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 505px;
   height: 167px;
 }
 
@@ -211,7 +199,7 @@ h3 {
       -ms-flex-align: center;
           align-items: center;
   color: #003BD1;
-  width: 267px;
+  max-width: 267px;
 }
 
 h4 {
@@ -295,17 +283,11 @@ button {
   vertical-align: middle;
   width: 270px;
   height: 65px;
-  -webkit-transition: background-color .2s ease,
- -webkit-box-shadow .2s ease;
-  transition: background-color .2s ease,
- -webkit-box-shadow .2s ease;
-  -o-transition: background-color .2s ease,
- box-shadow .2s ease;
-  transition: background-color .2s ease,
- box-shadow .2s ease;
-  transition: background-color .2s ease,
- box-shadow .2s ease,
- -webkit-box-shadow .2s ease;
+  -webkit-transition: background-color .2s ease, -webkit-box-shadow .2s ease;
+  transition: background-color .2s ease, -webkit-box-shadow .2s ease;
+  -o-transition: background-color .2s ease, box-shadow .2s ease;
+  transition: background-color .2s ease, box-shadow .2s ease;
+  transition: background-color .2s ease, box-shadow .2s ease, -webkit-box-shadow .2s ease;
 }
 
 button:hover {
@@ -318,4 +300,36 @@ button:active {
   background-color: #0032b2;
   -webkit-box-shadow: inset 0px 4px 16px rgba(0, 0, 0, 0.1);
           box-shadow: inset 0px 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 1366px) {
+  .title {
+    font-size: 70px;
+    margin-top: 100px;
+  }
+
+  .photo {
+    width: 50%;
+  }
+
+  .header {
+    padding: 50px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 60px;
+    margin-top: 75px;
+    margin-left: 50px;
+    max-width: 600px;
+  }
+
+  .arrow {
+    margin-left: 50px;
+  }
+
+  .header {
+    padding: 5px;
+  }
 }
